@@ -1,16 +1,15 @@
-import { memo } from "react";
-import "./header.scss";
+import React, { useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
-
-import logo from "assets/users/images/logo/logo.png";
 import { Link } from "react-router-dom";
+import logo from "assets/users/images/logo/logo.png";
+import "./header.scss";
 
 const Header = () => {
-  const menuBar = document.querySelector(".header__menu");
-  menuBar.addEventListener("click", function () {
-    menuBar.classList.toggle("active");
-    document.querySelector(".header__menu__items").classList.toggle("active");
-  });
+  const [isMenuActive, setIsMenuActive] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuActive(!isMenuActive);
+  };
 
   return (
     <div className="top">
@@ -19,10 +18,14 @@ const Header = () => {
           <div className="header__logo">
             <img src={logo} alt="logo" />
           </div>
-          <div className="header__menu">
-            <AiOutlineMenu />
+          <div className="header__menu" onClick={toggleMenu}>
+            <AiOutlineMenu
+              className={`svg-icon ${!isMenuActive ? "active" : ""}`}
+            />
           </div>
-          <div className="header__menu__items">
+          <div
+            className={`header__menu__items ${isMenuActive ? "active" : ""}`}
+          >
             <ul>
               <li className="header__menu__item">
                 <Link to={""}>Trang chủ</Link>
@@ -50,4 +53,4 @@ const Header = () => {
   );
 };
 
-export default memo(Header);
+export default Header;
