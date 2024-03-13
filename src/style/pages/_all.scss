@@ -1,0 +1,111 @@
+@use "sass:map";
+@import "theme";
+@import "responsive";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+html,
+body {
+  margin: 0;
+}
+
+* {
+  font-family: Roboto;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: 1500px;
+  // width: 100%;
+  // padding-left: 15px;
+  // padding-right: 15px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.col-lg-3 {
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+
+.col-lg-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.col-lg-9 {
+  flex: 0 0 75%;
+  max-width: 75%;
+}
+
+.btn-submit {
+  font-size: 14px;
+  color: map.get($theme-colors, "white-text");
+  font-weight: 800;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 16px 30px 17px;
+  background: map.get($theme-colors, "main");
+  border: none;
+  height: 100%;
+}
+
+// goi ham responsive khi setup devices
+@include Responsive($DESKTOP) {
+  .col-xl-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+
+  .col-xl-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@include Responsive($TABLET_DEVICE) {
+  .col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .col-md-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+@include Responsive($MEDIUM_DEVICE) {
+  .col-lg-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+}
+
+@include Responsive($WIDE_MOBILE) {
+  .col-sm-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .col-sm-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+@include Responsive($SMALL_DEVICES) {
+  .col-xs-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}

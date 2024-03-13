@@ -1,0 +1,65 @@
+@use "sass:map";
+@import "style/pages/theme";
+
+.top {
+  background: map.get($theme-colors, "main");
+  height: 80px;
+}
+
+.row {
+  justify-content: space-between;
+}
+
+.header__logo {
+  img {
+    width: 80px;
+  }
+}
+
+.header__menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &.active {
+    position: fixed;
+    top: 20px;
+    right: 0;
+    transform: translateX(-300px);
+    z-index: 1;
+  }
+
+  svg {
+    display: block;
+    font-size: 40px;
+    color: map.get($theme-colors, "sub-color");
+  }
+}
+
+.header__menu__items {
+  position: fixed;
+  width: 250px;
+  height: 100vh;
+  background: map.get($theme-colors, "main");
+  right: 0;
+  top: 0;
+  padding: 100px 50px;
+  transform: translateX(100%);
+
+  &.active {
+    transform: translateX(0);
+  }
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: map.get($theme-colors, "text-color");
+    line-height: 45px;
+    font-size: 25px;
+  }
+}
