@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { AiOutlineMenu } from "react-icons/ai";
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import logo from "assets/users/images/logo/logo.png";
 import "./header.scss";
@@ -19,9 +19,11 @@ const Header = () => {
             <img src={logo} alt="logo" />
           </div>
           <div className="header__menu" onClick={toggleMenu}>
-            <AiOutlineMenu
-              className={`svg-icon ${!isMenuActive ? "active" : ""}`}
-            />
+            {isMenuActive ? (
+              <AiOutlineClose className="svg-icon" />
+            ) : (
+              <AiOutlineMenu className="svg-icon" />
+            )}
           </div>
           <div
             className={`header__menu__items ${isMenuActive ? "active" : ""}`}
