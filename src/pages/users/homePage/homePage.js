@@ -1,180 +1,112 @@
-import { memo } from "react";
-
+import React, { memo } from "react";
 import "./homePage.scss";
-
-// import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-// import "react-tabs/style/react-tabs.css";
-// import { AiOutlineEye, AiOutlineShoppingCart } from "react-icons/ai";
-
-// import feature1Img from "assets/users/images/feature/feature1Img.jpg";
-// import feature2Img from "assets/users/images/feature/feature2Img.jpg";
-// import feature3Img from "assets/users/images/feature/feature3Img.jpg";
-// import feature4Img from "assets/users/images/feature/feature4Img.jpg";
-// import feature5Img from "assets/users/images/feature/feature5Img.jpg";
-// import feature6Img from "assets/users/images/feature/feature6Img.jpg";
-// import feature7Img from "assets/users/images/feature/feature7Img.jpg";
-// import feature8Img from "assets/users/images/feature/feature8Img.jpg";
-
-// import { Link } from "react-router-dom";
-// import { formatter } from "utils/formatter";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import "react-tabs/style/react-tabs.css";
+import { AiOutlineEye, AiOutlineShoppingCart } from "react-icons/ai";
 import aboutBg from "assets/users/images/background/about-bg.jpg";
+import { formatter } from "utils/formatter";
+import { Link } from "react-router-dom";
+
+import food1Img from "assets/users/images/food/food1Img.jpg";
+import food2Img from "assets/users/images/food/food2Img.jpg";
+import food3Img from "assets/users/images/food/food3Img.jpg";
+import food4Img from "assets/users/images/food/food4Img.jpg";
+import food5Img from "assets/users/images/food/food5Img.jpg";
+import food6Img from "assets/users/images/food/food6Img.jpg";
+import food7Img from "assets/users/images/food/food7Img.jpg";
+import food8Img from "assets/users/images/food/food8Img.jpg";
+import food9Img from "assets/users/images/food/food9Img.jpg";
+import food10Img from "assets/users/images/food/food10Img.jpg";
 
 const HomePage = () => {
-  // const featProducts = {
-  //   all: {
-  //     title: "Toàn bộ",
-  //     products: [
-  //       {
-  //         img: feature1Img,
-  //         name: "Thịt bò nạt",
-  //         price: 100000,
-  //       },
-  //       {
-  //         img: feature2Img,
-  //         name: "Chuối",
-  //         price: 10000,
-  //       },
-  //       {
-  //         img: feature3Img,
-  //         name: "Ổi hồng",
-  //         price: 20000,
-  //       },
-  //       {
-  //         img: feature4Img,
-  //         name: "Dưa hấu",
-  //         price: 30000,
-  //       },
-  //       {
-  //         img: feature5Img,
-  //         name: "Bò mỹ",
-  //         price: 170000,
-  //       },
-  //       {
-  //         img: feature6Img,
-  //         name: "Pizza phô mai",
-  //         price: 89000,
-  //       },
-  //       {
-  //         img: feature7Img,
-  //         name: "Hamberger bò",
-  //         price: 69000,
-  //       },
-  //       {
-  //         img: feature8Img,
-  //         name: "Sầu riêng",
-  //         price: 150000,
-  //       },
-  //     ],
-  //   },
-  //   freshMeat: {
-  //     title: "Thịt tươi",
-  //     products: [
-  //       {
-  //         img: feature1Img,
-  //         name: "Thịt bò nạt",
-  //         price: 100000,
-  //       },
-  //       {
-  //         img: feature5Img,
-  //         name: "Bò mỹ",
-  //         price: 170000,
-  //       },
-  //     ],
-  //   },
-  //   fruits: {
-  //     title: "Trái cây",
-  //     products: [
-  //       {
-  //         img: feature2Img,
-  //         name: "Chuối",
-  //         price: 10000,
-  //       },
-  //       {
-  //         img: feature3Img,
-  //         name: "Ổi hồng",
-  //         price: 20000,
-  //       },
-  //       {
-  //         img: feature4Img,
-  //         name: "Dưa hấu",
-  //         price: 30000,
-  //       },
-  //       {
-  //         img: feature8Img,
-  //         name: "Sầu riêng",
-  //         price: 150000,
-  //       },
-  //     ],
-  //   },
-  //   fastFood: {
-  //     title: "Thức ăn nhanh",
-  //     products: [
-  //       {
-  //         img: feature6Img,
-  //         name: "Pizza phô mai",
-  //         price: 89000,
-  //       },
-  //       {
-  //         img: feature7Img,
-  //         name: "Hamberger bò",
-  //         price: 69000,
-  //       },
-  //     ],
-  //   },
-  // };
+  const featProducts = {
+    all: {
+      title: "Toàn bộ",
+      products: [
+        {
+          img: food1Img,
+          name: "Yam talay (Salad hải sản cay)",
+          price: 100000,
+        },
+        {
+          img: food2Img,
+          name: "Yam pla dook foo (Cá trê chiên với salad xoài xanh)",
+          price: 70000,
+        },
+        {
+          img: food3Img,
+          name: "Som tam",
+          price: 99000,
+        },
+        {
+          img: food4Img,
+          name: "Tom kha gai",
+          price: 69000,
+        },
+        {
+          img: food5Img,
+          name: "Pad krapow (Húng quế chiên)",
+          price: 690000,
+        },
+        {
+          img: food6Img,
+          name: "Khao Neow Dam Sang Kaya",
+          price: 39000,
+        },
+        {
+          img: food7Img,
+          name: "Salapao",
+          price: 69000,
+        },
+        {
+          img: food8Img,
+          name: "Nam Tao Hu",
+          price: 49000,
+        },
+        {
+          img: food9Img,
+          name: "Trà sữa matcha",
+          price: 69000,
+        },
+        {
+          img: food10Img,
+          name: "Cà phê capuchino",
+          price: 69000,
+        },
+      ],
+    },
+  };
 
-  // const renderFeaturedProducts = (data) => {
-  //   const tabList = [];
-  //   const tabPanels = [];
+  const FeaturedProducts = ({ data }) => {
+    const renderProductList = () => (
+      <div className="row justify-content">
+        {Object.keys(data).map((key, index) => (
+          <div className="food__items" key={index}>
+            <div className="row">
+              {data[key].products.map((item, j) => (
+                <div className="col-lg-6" key={j}>
+                  <div className="food__item">
+                    <img src={item.img} alt={item.name} />
+                    <p>{item.name}</p>
+                  </div>
+                  <div className="food__price">
+                    <h4>{formatter(item.price)}</h4>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    );
 
-  //   Object.keys(data).forEach((key, index) => {
-  //     tabList.push(<Tab key={index}>{data[key].title}</Tab>);
-
-  //     const tabPanel = [];
-  //     data[key].products.forEach((item, j) => {
-  //       tabPanel.push(
-  //         <div className="col-lg-3" key={j}>
-  //           <div className="featured__item">
-  //             <div
-  //               className="featured__item__pic"
-  //               style={{
-  //                 backgroundImage: `url(${item.img})`,
-  //               }}
-  //             >
-  //               <ul className="featured__item__pic__hover">
-  //                 <li>
-  //                   <AiOutlineEye />
-  //                 </li>
-  //                 <li>
-  //                   <AiOutlineShoppingCart />
-  //                 </li>
-  //               </ul>
-  //             </div>
-  //             <div className="featured__item__text">
-  //               <h6>
-  //                 <Link to={""}>{item.name}</Link>
-  //               </h6>
-  //               <h5>{formatter(item.price)}</h5>
-  //             </div>
-  //           </div>
-  //         </div>
-  //       );
-  //     });
-  //     tabPanels.push(tabPanel);
-  //   });
-
-  //   return (
-  //     <Tabs>
-  //       <TabList>{tabList}</TabList>
-  //       {/* render bi loi thi doi {} thanh () */}
-  //       {tabPanels.map((item, key) => (
-  //         <TabPanel key={key}>
-  //           <div className="row">{item}</div>
-  //         </TabPanel>
-  //       ))}
-  //     </Tabs>
-  //   );
-  // };
+    return (
+      <>
+        {/* Kiểm tra điều kiện để render một trong hai */}
+        {data ? renderProductList() : null}
+      </>
+    );
+  };
 
   return (
     <>
@@ -224,16 +156,10 @@ const HomePage = () => {
               <h2 data-title="Đặt ngay">Thực đơn</h2>
             </div>
           </div>
-          <div className="row">
-            <div className="menu__title">
-              <button className="menu__btn">Tất cả</button>
-              <button className="menu__btn">Trưa</button>
-              <button className="menu__btn">Chiều tối</button>
-              <button className="menu__btn">Đồ uống</button>
-              <button className="menu__btn">Điểm tâm</button>
-            </div>
-          </div>
-          {/* {renderFeaturedProducts(featProducts)} */}
+          <div className="row">{/* Phần menu */}</div>
+
+          {/* Phần danh sách sản phẩm */}
+          <FeaturedProducts data={featProducts} />
         </div>
       </section>
     </>
