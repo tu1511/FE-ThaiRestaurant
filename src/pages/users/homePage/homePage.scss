@@ -1,2 +1,86 @@
 @use "sass:map";
 @import "style/pages/theme";
+
+// about
+
+.about {
+  background: map.get($theme-colors, "main");
+  padding: 80px 0;
+
+  .section__title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+
+    h2 {
+      font-size: 40px;
+      color: map.get($theme-colors, "text-color");
+      text-transform: uppercase;
+
+      &::before {
+        content: attr(data-title);
+        display: block;
+        color: map.get($theme-colors, "sub-color");
+        font-size: 30px;
+        font-family: "Dancing Script";
+      }
+    }
+  }
+
+  .about__item {
+    width: calc(96% / 2);
+    padding: 10px;
+
+    h2 {
+      color: map.get($theme-colors, "text-color");
+      font-size: 35px;
+    }
+
+    p {
+      font-size: 18px;
+      color: map.get($theme-colors, "text-color");
+      margin: 15px 0 30px;
+    }
+
+    .about__item__img {
+      position: relative;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 100px;
+        height: 100px;
+        border: 4px solid map.get($theme-colors, "sub-color");
+        position: absolute;
+        top: calc(50% - 50px);
+        left: calc(50% - 50px);
+        animation: RotateInCircle 5s infinite;
+      }
+
+      span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        color: map.get($theme-colors, "text-color");
+        font-family: "Dancing Script";
+        font-weight: 900;
+        font-size: 35px;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    img {
+      width: 100%;
+      border-radius: 10px;
+    }
+  }
+}
+
+@keyframes RotateInCircle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

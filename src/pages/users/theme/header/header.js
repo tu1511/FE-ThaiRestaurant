@@ -85,17 +85,6 @@ const Header = () => {
           <button className="header__image__content__btn btn">MENU</button>
         </div>
       </section>
-      <h1>1</h1>
-      <h1>1</h1>
-      <h1>1</h1>
-      <h1>1</h1>
-      <h1>1</h1>
-      <h1>1</h1>
-      <h1>1</h1>
-      <h1>1</h1>
-      <h1>1</h1>
-      <h1>1</h1>
-      <h1>1</h1>
     </>
   );
 };
