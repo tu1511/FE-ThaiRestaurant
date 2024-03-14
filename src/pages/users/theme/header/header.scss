@@ -60,15 +60,10 @@ $background: "/assets/users/images/background/restaurant-background.jpg";
   }
 
   .svg-icon {
-    // position: fixed;
     top: 20px;
     right: 0px;
     z-index: 10;
     transition: transform 0.3s ease;
-
-    // &.active {
-    //   right: 30px;
-    // }
   }
 }
 
@@ -140,13 +135,13 @@ $background: "/assets/users/images/background/restaurant-background.jpg";
     max-width: 600px;
 
     h2 {
-      font-size: 50px;
+      font-size: 60px;
       color: map.get($theme-colors, "text-color");
       font-family: "Dancing Script";
     }
 
     p {
-      font-size: 25px;
+      font-size: 24px;
       color: map.get($theme-colors, "text-color");
       font-weight: bold;
       margin: 15px 0;
