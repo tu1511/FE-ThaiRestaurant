@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import logo from "assets/users/images/logo/logo.png";
+import logo from "assets/users/images/logo/logo.jpg";
 import "./header.scss";
 
 const Header = () => {
