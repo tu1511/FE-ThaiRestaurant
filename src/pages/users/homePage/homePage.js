@@ -1,11 +1,11 @@
 import React, { memo } from "react";
 import "./homePage.scss";
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import { Tabs, TabList, TabPanel, Tab } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
-import { AiOutlineEye, AiOutlineShoppingCart } from "react-icons/ai";
+// import { AiOutlineEye, AiOutlineShoppingCart } from "react-icons/ai";
 import aboutBg from "assets/users/images/background/about-bg.jpg";
 import { formatter } from "utils/formatter";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 import food1Img from "assets/users/images/food/food1Img.jpg";
 import food2Img from "assets/users/images/food/food2Img.jpg";
@@ -19,9 +19,9 @@ import food9Img from "assets/users/images/food/food9Img.jpg";
 import food10Img from "assets/users/images/food/food10Img.jpg";
 
 const HomePage = () => {
-  const featProducts = {
+  const foodProducts = {
     all: {
-      title: "Toàn bộ",
+      title: "Tất cả",
       products: [
         {
           img: food1Img,
@@ -75,34 +75,127 @@ const HomePage = () => {
         },
       ],
     },
+    lunch: {
+      title: "Trưa",
+      products: [
+        {
+          img: food1Img,
+          name: "Yam talay (Salad hải sản cay)",
+          price: 100000,
+        },
+        {
+          img: food2Img,
+          name: "Yam pla dook foo",
+          price: 70000,
+        },
+        {
+          img: food3Img,
+          name: "Som tam",
+          price: 99000,
+        },
+        {
+          img: food4Img,
+          name: "Tom kha gai",
+          price: 69000,
+        },
+        {
+          img: food5Img,
+          name: "Pad krapow (Húng quế chiên)",
+          price: 690000,
+        },
+      ],
+    },
+    dinner: {
+      title: " Chiều tối",
+      products: [
+        {
+          img: food4Img,
+          name: "Tom kha gai",
+          price: 69000,
+        },
+        {
+          img: food5Img,
+          name: "Pad krapow (Húng quế chiên)",
+          price: 690000,
+        },
+        {
+          img: food6Img,
+          name: "Khao Neow Dam Sang Kaya",
+          price: 39000,
+        },
+      ],
+    },
+    drinks: {
+      title: "Đồ uống",
+      products: [
+        {
+          img: food9Img,
+          name: "Trà sữa matcha",
+          price: 69000,
+        },
+        {
+          img: food10Img,
+          name: "Cà phê capuchino",
+          price: 69000,
+        },
+      ],
+    },
+    desserts: {
+      title: "Điểm tâm",
+      products: [
+        {
+          img: food7Img,
+          name: "Salapao",
+          price: 69000,
+        },
+        {
+          img: food8Img,
+          name: "Nam Tao Hu",
+          price: 49000,
+        },
+      ],
+    },
   };
 
-  const FeaturedProducts = ({ data }) => {
-    const renderProductList = () => (
-      <div className="row justify-content">
-        {Object.keys(data).map((key, index) => (
-          <div className="food__items" key={index}>
-            <div className="row">
-              {data[key].products.map((item, j) => (
-                <div className="col-lg-6 food__item" key={j}>
-                  <img src={item.img} alt={item.name} />
-                  <p>{item.name}</p>
-                  <div className="food__price">
-                    <h4>{formatter(item.price)}</h4>
-                  </div>
+  const renderFoodProducts = (data) => {
+    const tabList = [];
+    const tabPanels = [];
+    <div className="row justify-content"></div>;
+    Object.keys(data).forEach((key, index) => {
+      tabList.push(<Tab key={index}>{data[key].title}</Tab>);
+
+      const tabPanel = [];
+      data[key].products.forEach((item, j) => {
+        tabPanel.push(
+          <div className="col-lg-6" key={j}>
+            <div className="food__items">
+              {/* <div className="row"> */}
+              <div className="food__item" key={j}>
+                <img src={item.img} alt={item.name} />
+                <p>{item.name}</p>
+                <div className="food__price">
+                  <h4>{formatter(item.price)}</h4>
                 </div>
-              ))}
+              </div>
             </div>
           </div>
-        ))}
-      </div>
-    );
+          // </div>
+        );
+      });
+      tabPanels.push(tabPanel);
+    });
 
     return (
-      <>
+      <Tabs>
         {/* Kiểm tra điều kiện để render một trong hai */}
-        {data ? renderProductList() : null}
-      </>
+        <TabList>{tabList}</TabList>
+        {/* render bi loi thi doi {} thanh () */}
+        {tabPanels.map((item, key) => (
+          <TabPanel key={key}>
+            <h1>{item}</h1>
+          </TabPanel>
+        ))}
+      </Tabs>
     );
   };
 
@@ -149,15 +242,13 @@ const HomePage = () => {
 
       <section className="menu">
         <div className="container">
-          <div className="row">
+          <div className="menu__food">
             <div className="section__title">
               <h2 data-title="Đặt ngay">Thực đơn</h2>
             </div>
+            {/* Phần danh sách sản phẩm */}
+            {renderFoodProducts(foodProducts)}
           </div>
-          <div className="row">{/* Phần menu */}</div>
-
-          {/* Phần danh sách sản phẩm */}
-          <FeaturedProducts data={featProducts} />
         </div>
       </section>
     </>
