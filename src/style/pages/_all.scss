@@ -120,6 +120,36 @@ body {
     flex: 0 0 100%;
     max-width: 100%;
   }
+
+  .header__logo {
+    margin-left: 15px;
+  }
+
+  .svg-icon {
+    position: absolute !important;
+    right: 40px !important;
+  }
+
+  .header__menu__items {
+    width: 155px;
+  }
+
+  .about__item {
+    width: 100% !important;
+  }
+
+  .feedback__item {
+    width: 100% !important;
+    margin-bottom: 20px;
+  }
+
+  .team__items {
+    width: 100% !important;
+    margin-bottom: 40px;
+    img {
+      height: 700px !important;
+    }
+  }
 }
 
 @include Responsive($MEDIUM_DEVICE) {

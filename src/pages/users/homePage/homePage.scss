@@ -1,5 +1,6 @@
 @use "sass:map";
 @import "style/pages/theme";
+@import "style/pages/responsive";
 
 // about
 
@@ -266,4 +267,8 @@
       }
     }
   }
+}
+
+// responsive
+@include Responsive($TABLET_DEVICE) {
 }

@@ -1,5 +1,6 @@
 @use "sass:map";
 @import "style/pages/theme";
+@import "style/pages/responsive";
 
 $background: "/assets/users/images/background/restaurant-background.jpg";
 
@@ -42,8 +43,6 @@ $background: "/assets/users/images/background/restaurant-background.jpg";
   justify-content: center;
   align-items: center;
   cursor: pointer;
-
-  //   transition: all 0.3s ease;
 
   &.active {
     position: fixed;

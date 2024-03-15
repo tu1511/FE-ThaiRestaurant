@@ -178,7 +178,9 @@ const HomePage = () => {
       for (let i = 0; i < products.length; i += 2) {
         tabPanel.push(
           <div className="row" key={i}>
-            <div className="col-lg-6">
+            <div className="col-lg-6 col-md-12">
+              {" "}
+              {/* Di chuyển lớp ra khỏi vòng lặp */}
               <div className="food__items">
                 <div className="food__item">
                   <img src={products[i].img} alt={products[i].name} />
@@ -190,7 +192,9 @@ const HomePage = () => {
               </div>
             </div>
             {products[i + 1] && (
-              <div className="col-lg-6">
+              <div className="col-lg-6 col-md-12">
+                {" "}
+                {/* Lớp áp dụng cho cả sản phẩm thứ hai */}
                 <div className="food__items">
                   <div className="food__item">
                     <img src={products[i + 1].img} alt={products[i + 1].name} />
