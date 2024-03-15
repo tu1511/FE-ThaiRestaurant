@@ -154,3 +154,64 @@
     cursor: pointer;
   }
 }
+
+// feedback
+
+.feedback {
+  padding: 80px 0;
+  background: map.get($theme-colors, "main");
+
+  .feedback__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .feedback__item {
+      width: calc(100% / 3 - 80px);
+      border: 2px solid map.get($theme-colors, "bg-color");
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0, 0, 0 15px rgba(0, 0, 0, 0.7);
+
+      &:hover {
+        img {
+          border-color: map.get($theme-colors, "sub-color");
+        }
+      }
+
+      .feedback__item__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      h2 {
+        font-size: 20px;
+        color: map.get($theme-colors, "text-color");
+      }
+
+      span {
+        color: map.get($theme-colors, "text-color");
+      }
+
+      p {
+        color: map.get($theme-colors, "text-color");
+        font-size: 20px;
+        margin: 20px 0;
+      }
+
+      img {
+        width: 150px;
+        border-radius: 40%;
+        border: 4px solid map.get($theme-colors, "bg-color");
+        transition: all 0.5s ease-in;
+      }
+
+      .feedback__item__star {
+        a {
+          color: map.get($theme-colors, "sub-color");
+        }
+      }
+    }
+  }
+}

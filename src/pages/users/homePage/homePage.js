@@ -2,10 +2,13 @@ import React, { memo } from "react";
 import "./homePage.scss";
 import { Tabs, TabList, TabPanel, Tab } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
-// import { AiOutlineEye, AiOutlineShoppingCart } from "react-icons/ai";
-import aboutBg from "assets/users/images/background/about-bg.jpg";
 import { formatter } from "utils/formatter";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+
+import { GoStarFill } from "react-icons/go";
+
+import aboutBg from "assets/users/images/background/about-bg.jpg";
+import foodSpeImg from "assets/users/images/foodSpecialist/ahihi.jpg";
 
 import food1Img from "assets/users/images/food/food1Img.jpg";
 import food2Img from "assets/users/images/food/food2Img.jpg";
@@ -213,7 +216,7 @@ const HomePage = () => {
 
   return (
     <>
-      {/* Phần about */}
+      {/* about */}
       <section className="about">
         <div className="container">
           <div className="row">
@@ -252,7 +255,7 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-      {/* Phần menu */}
+      {/* menu */}
       <section className="menu">
         <div className="container">
           <div className="menu__food">
@@ -261,6 +264,129 @@ const HomePage = () => {
             </div>
             {/* Phần danh sách sản phẩm */}
             {renderFoodProducts(foodProducts)}
+          </div>
+        </div>
+      </section>
+
+      {/* feedback */}
+      <section className="feedback">
+        <div className="container">
+          <div className="row">
+            <div className="section__title">
+              <h2 data-title="Ý kiến">Phản hồi</h2>
+            </div>
+            <div className="row">
+              <div className="feedback__items">
+                <div className="feedback__item">
+                  <div className="feedback__item__content">
+                    <div className="feedback__item__content__text">
+                      <h2>Nguyen Minh Tu</h2>
+                      <span>Food Specialist</span>
+                    </div>
+                    <div className="feedback__item__content__img">
+                      <img src={foodSpeImg} />
+                    </div>
+                  </div>
+                  <p>
+                    Mr. Tu là một chuyên gia ẩm thực với hơn 10 năm kinh nghiệm.
+                    Sự sáng tạo và tâm huyết của ông đã tạo ra những món ăn độc
+                    đáo và ngon miệng, khiến nhà hàng của mình trở thành điểm
+                    đến ưa thích của nhiều thực khách. Ông không chỉ là một đầu
+                    bếp tài ba, mà còn là một người truyền cảm hứng và động viên
+                    đồng nghiệp.
+                  </p>
+                  <div className="feedback__item__star">
+                    <Link>
+                      <GoStarFill />
+                    </Link>
+                    <Link>
+                      <GoStarFill />
+                    </Link>
+                    <Link>
+                      <GoStarFill />
+                    </Link>
+                    <Link>
+                      <GoStarFill />
+                    </Link>
+                    <Link>
+                      <GoStarFill />
+                    </Link>
+                  </div>
+                </div>
+                <div className="feedback__item">
+                  <div className="feedback__item__content">
+                    <div className="feedback__item__content__text">
+                      <h2>Nguyen Minh Tu</h2>
+                      <span>Food Specialist</span>
+                    </div>
+                    <div className="feedback__item__content__img">
+                      <img src={foodSpeImg} />
+                    </div>
+                  </div>
+                  <p>
+                    Mr. Tu là một chuyên gia ẩm thực với hơn 10 năm kinh nghiệm.
+                    Sự sáng tạo và tâm huyết của ông đã tạo ra những món ăn độc
+                    đáo và ngon miệng, khiến nhà hàng của mình trở thành điểm
+                    đến ưa thích của nhiều thực khách. Ông không chỉ là một đầu
+                    bếp tài ba, mà còn là một người truyền cảm hứng và động viên
+                    đồng nghiệp.
+                  </p>
+                  <div className="feedback__item__star">
+                    <Link>
+                      <GoStarFill />
+                    </Link>
+                    <Link>
+                      <GoStarFill />
+                    </Link>
+                    <Link>
+                      <GoStarFill />
+                    </Link>
+                    <Link>
+                      <GoStarFill />
+                    </Link>
+                    <Link>
+                      <GoStarFill />
+                    </Link>
+                  </div>
+                </div>
+                <div className="feedback__item">
+                  <div className="feedback__item__content">
+                    <div className="feedback__item__content__text">
+                      <h2>Nguyen Minh Tu</h2>
+                      <span>Food Specialist</span>
+                    </div>
+                    <div className="feedback__item__content__img">
+                      <img src={foodSpeImg} />
+                    </div>
+                  </div>
+                  <p>
+                    Mr. Tu là một chuyên gia ẩm thực với hơn 10 năm kinh nghiệm.
+                    Sự sáng tạo và tâm huyết của ông đã tạo ra những món ăn độc
+                    đáo và ngon miệng, khiến nhà hàng của mình trở thành điểm
+                    đến ưa thích của nhiều thực khách. Ông không chỉ là một đầu
+                    bếp tài ba, mà còn là một người truyền cảm hứng và động viên
+                    đồng nghiệp.
+                  </p>
+                  <div className="feedback__item__star">
+                    <Link>
+                      <GoStarFill />
+                    </Link>
+                    <Link>
+                      <GoStarFill />
+                    </Link>
+                    <Link>
+                      <GoStarFill />
+                    </Link>
+                    <Link>
+                      <GoStarFill />
+                    </Link>
+                    <Link>
+                      <GoStarFill />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
