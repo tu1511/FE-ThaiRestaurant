@@ -30,7 +30,7 @@ const HomePage = () => {
         },
         {
           img: food2Img,
-          name: "Yam pla dook foo (Cá trê chiên với salad xoài xanh)",
+          name: "Yam pla dook foo",
           price: 70000,
         },
         {
@@ -84,11 +84,9 @@ const HomePage = () => {
           <div className="food__items" key={index}>
             <div className="row">
               {data[key].products.map((item, j) => (
-                <div className="col-lg-6" key={j}>
-                  <div className="food__item">
-                    <img src={item.img} alt={item.name} />
-                    <p>{item.name}</p>
-                  </div>
+                <div className="col-lg-6 food__item" key={j}>
+                  <img src={item.img} alt={item.name} />
+                  <p>{item.name}</p>
                   <div className="food__price">
                     <h4>{formatter(item.price)}</h4>
                   </div>

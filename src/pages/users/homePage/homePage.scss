@@ -108,7 +108,6 @@
     left: 15px;
     right: 15px;
     bottom: 0;
-    border: 1px dashed map.get($theme-colors, "main");
   }
 
   &:hover {
@@ -128,6 +127,9 @@
   .food__item {
     display: flex;
     align-items: center;
+    padding: 10px 0;
+    position: relative;
+    border-bottom: 3px dashed map.get($theme-colors, "main");
 
     p {
       color: map.get($theme-colors, "text-color");
@@ -136,6 +138,7 @@
     }
 
     img {
+      height: 150px;
       width: 150px;
       margin-right: 25px;
     }
@@ -143,9 +146,14 @@
 
   .food__price {
     h4 {
+      position: absolute;
+      right: 10px;
+      top: 43%;
+      align-items: center;
       color: map.get($theme-colors, "sub-color");
       transition: all 0.3s ease-in;
       font-size: 20px;
+      margin-left: 50px;
     }
   }
 }
