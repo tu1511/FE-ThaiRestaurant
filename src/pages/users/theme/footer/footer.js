@@ -1,7 +1,8 @@
 import { memo } from "react";
 import { Link } from "react-router-dom";
-import { BsFacebook } from "react-icons/bs";
+
 import {
+  AiOutlineFacebook,
   AiOutlineGithub,
   AiOutlineInstagram,
   AiOutlineLinkedin,
@@ -38,16 +39,22 @@ const Footer = () => {
                 Email: minhtu15112k3@gmail.com
               </p>
               <div className="footer__socials">
-                <Link to={""}>
-                  <BsFacebook />
+                <Link
+                  to={
+                    "https://www.facebook.com/profile.php?id=100018975219672&locale=vi_VN"
+                  }
+                >
+                  <AiOutlineFacebook />
                 </Link>
-                <Link to={""}>
+                <Link to={"https://github.com/tu1511"}>
                   <AiOutlineGithub />
                 </Link>
-                <Link to={""}>
+                <Link
+                  to={"https://www.linkedin.com/in/t%E1%BB%A9-minh-3277022a6/"}
+                >
                   <AiOutlineLinkedin />
                 </Link>
-                <Link to={""}>
+                <Link to={"#"}>
                   <AiOutlineInstagram />
                 </Link>
               </div>
