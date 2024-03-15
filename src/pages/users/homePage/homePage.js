@@ -160,40 +160,52 @@ const HomePage = () => {
   const renderFoodProducts = (data) => {
     const tabList = [];
     const tabPanels = [];
-    <div className="row justify-content"></div>;
+
     Object.keys(data).forEach((key, index) => {
       tabList.push(<Tab key={index}>{data[key].title}</Tab>);
 
       const tabPanel = [];
-      data[key].products.forEach((item, j) => {
+      const products = data[key].products;
+
+      for (let i = 0; i < products.length; i += 2) {
         tabPanel.push(
-          <div className="col-lg-6" key={j}>
-            <div className="food__items">
-              {/* <div className="row"> */}
-              <div className="food__item" key={j}>
-                <img src={item.img} alt={item.name} />
-                <p>{item.name}</p>
-                <div className="food__price">
-                  <h4>{formatter(item.price)}</h4>
+          <div className="row" key={i}>
+            <div className="col-lg-6">
+              <div className="food__items">
+                <div className="food__item">
+                  <img src={products[i].img} alt={products[i].name} />
+                  <p>{products[i].name}</p>
+                  <div className="food__price">
+                    <h4>{formatter(products[i].price)}</h4>
+                  </div>
                 </div>
               </div>
             </div>
+            {products[i + 1] && (
+              <div className="col-lg-6">
+                <div className="food__items">
+                  <div className="food__item">
+                    <img src={products[i + 1].img} alt={products[i + 1].name} />
+                    <p>{products[i + 1].name}</p>
+                    <div className="food__price">
+                      <h4>{formatter(products[i + 1].price)}</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
-          // </div>
         );
-      });
+      }
+
       tabPanels.push(tabPanel);
     });
 
     return (
       <Tabs>
-        {/* Kiểm tra điều kiện để render một trong hai */}
         <TabList>{tabList}</TabList>
-        {/* render bi loi thi doi {} thanh () */}
         {tabPanels.map((item, key) => (
-          <TabPanel key={key}>
-            <h1>{item}</h1>
-          </TabPanel>
+          <TabPanel key={key}>{item}</TabPanel>
         ))}
       </Tabs>
     );
@@ -201,6 +213,7 @@ const HomePage = () => {
 
   return (
     <>
+      {/* Phần about */}
       <section className="about">
         <div className="container">
           <div className="row">
@@ -239,7 +252,7 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-
+      {/* Phần menu */}
       <section className="menu">
         <div className="container">
           <div className="menu__food">
