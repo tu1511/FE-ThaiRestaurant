@@ -176,4 +176,65 @@ body {
     flex: 0 0 100%;
     max-width: 100%;
   }
+
+  .header__logo {
+    margin-left: 20px;
+  }
+
+  .svg-icon {
+    position: absolute !important;
+    right: 20px !important;
+  }
+
+  .header__menu__items {
+    position: static;
+    width: 98px;
+    padding: 100px 30px;
+
+    li {
+      a {
+        font-size: 16px;
+      }
+    }
+  }
+  .food__items {
+    .food__item {
+      p {
+        font-size: 16px !important;
+        width: 150px;
+      }
+    }
+
+    .food__price {
+      h4 {
+        font-size: 16px !important;
+      }
+    }
+  }
+
+  .about__item {
+    width: 100% !important;
+  }
+
+  .feedback__item {
+    width: 100% !important;
+    margin: 20px;
+  }
+
+  .team__items {
+    width: 100% !important;
+    margin-bottom: 40px;
+    img {
+      height: 400px !important;
+    }
+  }
+
+  .react-tabs li {
+    font-size: 14px;
+    margin-right: 5px;
+  }
+
+  .container {
+    width: 100%;
+  }
 }

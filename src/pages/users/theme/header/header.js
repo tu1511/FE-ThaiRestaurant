@@ -76,7 +76,11 @@ const Header = () => {
       </section>
 
       <section className="header__image">
-        <div className="header__image__content">
+        <div
+          className="header__image__content"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+        >
           <h2>Nhà hàng Thai Restaurant</h2>
           <p>
             Đẳng cấp lên ngôi, vị ngọt đôi môi, niềm vui ngóng chờ giây phút thơ

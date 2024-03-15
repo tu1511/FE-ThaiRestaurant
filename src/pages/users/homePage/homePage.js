@@ -178,8 +178,7 @@ const HomePage = () => {
       for (let i = 0; i < products.length; i += 2) {
         tabPanel.push(
           <div className="row" key={i}>
-            <div className="col-lg-6 col-md-12">
-              {" "}
+            <div className="col-lg-6 col-md-12 col-xs-12">
               {/* Di chuyển lớp ra khỏi vòng lặp */}
               <div className="food__items">
                 <div className="food__item">
@@ -192,8 +191,7 @@ const HomePage = () => {
               </div>
             </div>
             {products[i + 1] && (
-              <div className="col-lg-6 col-md-12">
-                {" "}
+              <div className="col-lg-6 col-md-12 col-xs-12">
                 {/* Lớp áp dụng cho cả sản phẩm thứ hai */}
                 <div className="food__items">
                   <div className="food__item">
@@ -226,7 +224,7 @@ const HomePage = () => {
   return (
     <>
       {/* about */}
-      <section className="about">
+      <section className="about" id="about">
         <div className="container">
           <div className="row">
             <div className="section__title">
@@ -235,7 +233,11 @@ const HomePage = () => {
           </div>
 
           <div className="row">
-            <div className="about__item">
+            <div
+              className="about__item"
+              data-aos="fade-up-right"
+              data-aos-duration="1500"
+            >
               <h2>CHÀO MỪNG BẠN ĐẾN VỚI THAI RESTAURANT</h2>
               <p>
                 Thai Restaurant – Authentic Thai Eatery là chuỗi nhà hàng Chuẩn
@@ -255,7 +257,11 @@ const HomePage = () => {
               </p>
               <button className="btn">XEM MENU</button>
             </div>
-            <div className="about__item">
+            <div
+              className="about__item"
+              data-aos="fade-up-left"
+              data-aos-duration="1500"
+            >
               <div className="about__item__img">
                 <span>Hơn 10 năm kinh nghiệm</span>
                 <img src={aboutBg} alt=""></img>
@@ -265,7 +271,7 @@ const HomePage = () => {
         </div>
       </section>
       {/* menu */}
-      <section className="menu">
+      <section className="menu" id="menu">
         <div className="container">
           <div className="menu__food">
             <div className="section__title">
@@ -278,7 +284,7 @@ const HomePage = () => {
       </section>
 
       {/* feedback */}
-      <section className="feedback">
+      <section className="feedback" id="feedback">
         <div className="container">
           <div className="row">
             <div className="section__title">
@@ -399,7 +405,7 @@ const HomePage = () => {
       </section>
 
       {/* team */}
-      <section className="team">
+      <section className="team" id="team">
         <div className="container">
           <div className="row">
             <div className="section__title">
