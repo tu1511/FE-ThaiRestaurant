@@ -202,6 +202,7 @@
 
       img {
         width: 150px;
+        height: 150px;
         border-radius: 40%;
         border: 4px solid map.get($theme-colors, "bg-color");
         transition: all 0.5s ease-in;

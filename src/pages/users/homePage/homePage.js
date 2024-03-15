@@ -6,9 +6,12 @@ import { formatter } from "utils/formatter";
 import { Link } from "react-router-dom";
 
 import { GoStarFill } from "react-icons/go";
+import { FaRegStarHalfStroke } from "react-icons/fa6";
 
 import aboutBg from "assets/users/images/background/about-bg.jpg";
-import foodSpeImg from "assets/users/images/foodSpecialist/ahihi.jpg";
+import foodSpe1Img from "assets/users/images/foodSpecialist/ahihi.jpg";
+import foodSpe2Img from "assets/users/images/foodSpecialist/naruto.jpg";
+import foodSpe3Img from "assets/users/images/foodSpecialist/luffy.jpg";
 
 import food1Img from "assets/users/images/food/food1Img.jpg";
 import food2Img from "assets/users/images/food/food2Img.jpg";
@@ -284,7 +287,7 @@ const HomePage = () => {
                       <span>Food Specialist</span>
                     </div>
                     <div className="feedback__item__content__img">
-                      <img src={foodSpeImg} />
+                      <img src={foodSpe1Img} />
                     </div>
                   </div>
                   <p>
@@ -316,20 +319,19 @@ const HomePage = () => {
                 <div className="feedback__item">
                   <div className="feedback__item__content">
                     <div className="feedback__item__content__text">
-                      <h2>Nguyen Minh Tu</h2>
+                      <h2>Uzumaki Naruto</h2>
                       <span>Food Specialist</span>
                     </div>
                     <div className="feedback__item__content__img">
-                      <img src={foodSpeImg} />
+                      <img src={foodSpe2Img} />
                     </div>
                   </div>
                   <p>
-                    Mr. Tu là một chuyên gia ẩm thực với hơn 10 năm kinh nghiệm.
-                    Sự sáng tạo và tâm huyết của ông đã tạo ra những món ăn độc
-                    đáo và ngon miệng, khiến nhà hàng của mình trở thành điểm
-                    đến ưa thích của nhiều thực khách. Ông không chỉ là một đầu
-                    bếp tài ba, mà còn là một người truyền cảm hứng và động viên
-                    đồng nghiệp.
+                    Uzumaki Naruto, người từng là một ninja vĩ đại, giờ đã trở
+                    thành một chuyên gia ẩm thực hàng đầu. Sau khi đạt được ước
+                    mơ của mình là trở thành Hokage, vị lãnh tụ mạnh mẽ nhất
+                    trong làng, Naruto quyết định khám phá và phát triển sở
+                    thích mới của mình - nấu ăn.
                   </p>
                   <div className="feedback__item__star">
                     <Link>
@@ -352,20 +354,19 @@ const HomePage = () => {
                 <div className="feedback__item">
                   <div className="feedback__item__content">
                     <div className="feedback__item__content__text">
-                      <h2>Nguyen Minh Tu</h2>
+                      <h2>Monkey D. Luffy</h2>
                       <span>Food Specialist</span>
                     </div>
                     <div className="feedback__item__content__img">
-                      <img src={foodSpeImg} />
+                      <img src={foodSpe3Img} />
                     </div>
                   </div>
                   <p>
-                    Mr. Tu là một chuyên gia ẩm thực với hơn 10 năm kinh nghiệm.
-                    Sự sáng tạo và tâm huyết của ông đã tạo ra những món ăn độc
-                    đáo và ngon miệng, khiến nhà hàng của mình trở thành điểm
-                    đến ưa thích của nhiều thực khách. Ông không chỉ là một đầu
-                    bếp tài ba, mà còn là một người truyền cảm hứng và động viên
-                    đồng nghiệp.
+                    Monkey D. Luffy, một thuyền trưởng hải tặc nổi tiếng, giờ đã
+                    trở thành một chuyên gia ẩm thực tài ba. Với tinh thần phiêu
+                    lưu và lòng đam mê sâu sắc, Luffy đã dành nhiều năm khám phá
+                    những hương vị độc đáo của thế giới và học hỏi từ những đầu
+                    bếp tài ba mọi miền đất nước.
                   </p>
                   <div className="feedback__item__star">
                     <Link>
@@ -381,7 +382,7 @@ const HomePage = () => {
                       <GoStarFill />
                     </Link>
                     <Link>
-                      <GoStarFill />
+                      <FaRegStarHalfStroke />
                     </Link>
                   </div>
                 </div>
