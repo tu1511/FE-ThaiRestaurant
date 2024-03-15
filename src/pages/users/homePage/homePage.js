@@ -9,9 +9,11 @@ import { GoStarFill } from "react-icons/go";
 import { FaRegStarHalfStroke } from "react-icons/fa6";
 
 import aboutBg from "assets/users/images/background/about-bg.jpg";
-import foodSpe1Img from "assets/users/images/foodSpecialist/ahihi.jpg";
-import foodSpe2Img from "assets/users/images/foodSpecialist/naruto.jpg";
-import foodSpe3Img from "assets/users/images/foodSpecialist/luffy.jpg";
+import foodSpe1Img from "assets/users/images/anime/ahihi.jpg";
+import foodSpe2Img from "assets/users/images/anime/naruto.jpg";
+import foodSpe3Img from "assets/users/images/anime/luffy.jpg";
+import Staff1Img from "assets/users/images/anime/sanji.jpg";
+import Staff2Img from "assets/users/images/anime/souma.jpg";
 
 import food1Img from "assets/users/images/food/food1Img.jpg";
 import food2Img from "assets/users/images/food/food2Img.jpg";
@@ -287,7 +289,7 @@ const HomePage = () => {
                       <span>Food Specialist</span>
                     </div>
                     <div className="feedback__item__content__img">
-                      <img src={foodSpe1Img} />
+                      <img src={foodSpe1Img} alt=""></img>
                     </div>
                   </div>
                   <p>
@@ -323,7 +325,7 @@ const HomePage = () => {
                       <span>Food Specialist</span>
                     </div>
                     <div className="feedback__item__content__img">
-                      <img src={foodSpe2Img} />
+                      <img src={foodSpe2Img} alt=""></img>
                     </div>
                   </div>
                   <p>
@@ -358,7 +360,7 @@ const HomePage = () => {
                       <span>Food Specialist</span>
                     </div>
                     <div className="feedback__item__content__img">
-                      <img src={foodSpe3Img} />
+                      <img src={foodSpe3Img} alt=""></img>
                     </div>
                   </div>
                   <p>
@@ -386,6 +388,40 @@ const HomePage = () => {
                     </Link>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* team */}
+      <section className="team">
+        <div className="container">
+          <div className="row">
+            <div className="section__title">
+              <h2 data-title="Cộng sự">Thành viên</h2>
+            </div>
+          </div>
+          <div className="row">
+            <div className="team__items">
+              <img src={foodSpe1Img} alt=""></img>
+              <div className="team__items__text">
+                <h2>Nguyen Minh Tu</h2>
+                <span>Bếp trưởng</span>
+              </div>
+            </div>
+            <div className="team__items">
+              <img src={Staff1Img} alt=""></img>
+              <div className="team__items__text">
+                <h2>Vinsmoke Sanji</h2>
+                <span>Cu li</span>
+              </div>
+            </div>
+            <div className="team__items">
+              <img src={Staff2Img} alt=""></img>
+              <div className="team__items__text">
+                <h2>Soma Yukihira</h2>
+                <span>Phụ bếp</span>
               </div>
             </div>
           </div>
