@@ -31,7 +31,7 @@ const Footer = () => {
                 All Day
               </p>
             </div>
-            <div className="footer__item">
+            <div className="footer__item footer__item__final">
               <h2>Liên hệ với chúng tôi</h2>
               <p>
                 Phone: 0337731011

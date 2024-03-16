@@ -22,7 +22,7 @@ $SMALL_DEVICES: "SMALL_DEVICES";
       @content;
     }
   } @else if $canvas == $SMALL_DEVICES {
-    @media only screen and (max-width: 575px) {
+    @media only screen and (max-width: 767px) {
       @content;
     }
   }
