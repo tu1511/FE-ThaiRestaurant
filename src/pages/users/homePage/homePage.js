@@ -255,7 +255,9 @@ const HomePage = () => {
                 nghiệm những hương vị đặc trưng của Thái Lan tại Thai
                 Restaurant!
               </p>
-              <button className="btn">XEM MENU</button>
+              <button className="btn">
+                <Link to={"/menu"}></Link>XEM MENU
+              </button>
             </div>
             <div
               className="about__item"
