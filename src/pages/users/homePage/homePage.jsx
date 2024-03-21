@@ -184,6 +184,7 @@ const HomePage = () => {
                 <div className="food__item">
                   <img src={products[i].img} alt={products[i].name} />
                   <p>{products[i].name}</p>
+                
                   <div className="food__price">
                     <h4>{formatter(products[i].price)}</h4>
                   </div>
