@@ -184,7 +184,7 @@ const HomePage = () => {
                 <div className="food__item">
                   <img src={products[i].img} alt={products[i].name} />
                   <p>{products[i].name}</p>
-                
+
                   <div className="food__price">
                     <h4>{formatter(products[i].price)}</h4>
                   </div>
@@ -257,7 +257,7 @@ const HomePage = () => {
                 Restaurant!
               </p>
               <button className="btn">
-                <Link to={"/menu"}></Link>XEM MENU
+                <a href="#menu">XEM MENU</a>
               </button>
             </div>
             <div

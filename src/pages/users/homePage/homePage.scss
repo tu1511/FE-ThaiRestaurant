@@ -23,6 +23,17 @@
       margin: 15px 0 30px;
     }
 
+    a {
+      text-decoration: none;
+      color: white;
+    }
+
+    button:hover {
+      a {
+        color: map.get($theme-colors, "sub-color");
+      }
+    }
+
     .about__item__img {
       position: relative;
 

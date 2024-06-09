@@ -13,7 +13,7 @@ import "./footer.scss";
 const Footer = () => {
   return (
     <>
-      <section className="footer">
+      <section className="footer" id="footer">
         <div className="footer__bg"></div>
         <div className="container">
           <div className="row justify-content">

@@ -52,22 +52,22 @@ const Header = () => {
             >
               <ul>
                 <li className="header__menu__item">
-                  <Link to={""}>Trang chủ</Link>
+                  <Link to="/">Trang chủ</Link>
                 </li>
                 <li className="header__menu__item">
-                  <Link to={""}>Về chúng tôi</Link>
+                  <a href="#about">Về chúng tôi</a>
                 </li>
                 <li className="header__menu__item">
-                  <Link to={""}>Thực đơn</Link>
+                  <a href="#menu">Thực đơn</a>
                 </li>
                 <li className="header__menu__item">
-                  <Link to={""}>Phản hồi</Link>
+                  <a href="#feedback">Phản hồi</a>
                 </li>
                 <li className="header__menu__item">
-                  <Link to={""}>Nhân sự</Link>
+                  <a href="#team">Nhân sự</a>
                 </li>
                 <li className="header__menu__item">
-                  <Link to={""}>Liên hệ</Link>
+                  <a href="#footer">Liên hệ</a>
                 </li>
               </ul>
             </div>
