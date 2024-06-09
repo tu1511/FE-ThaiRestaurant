@@ -32,9 +32,13 @@ const Header = () => {
     };
   }, []);
 
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <>
-      <section className="top">
+      <section className="top" id="header">
         <div className="container">
           <div className="row">
             <div className="header__logo">
@@ -52,7 +56,9 @@ const Header = () => {
             >
               <ul>
                 <li className="header__menu__item">
-                  <Link to="/">Trang chủ</Link>
+                  <Link to="#" onClick={scrollToTop}>
+                    Trang chủ
+                  </Link>
                 </li>
                 <li className="header__menu__item">
                   <a href="#about">Về chúng tôi</a>
